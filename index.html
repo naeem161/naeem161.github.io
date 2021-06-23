@@ -10,7 +10,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.abc').forEach(function (button) {
                 button.onclick = function () {
-                    document.querySelector('body').style.color = button.dataset.color;
+                    document.querySelector('#qwe').style.color = button.dataset.color;
                 }
             })
         })
@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <h1 id='qwe'>Hello</h1>
     <button class="abc" data-color="red"> Red </button>
     <button class="abc" data-color="blue"> Green </button>
     <button class="abc" data-color="green"> Blue </button>
