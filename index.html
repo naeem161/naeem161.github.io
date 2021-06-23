@@ -6,23 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.abc').forEach(function (button) {
-                button.onclick = function () {
-                    document.querySelector('#qwe').style.color = button.dataset.color;
+            document.querySelectorAll('.abc').forEach(function (el) {
+                el.onclick = function () {
+                    document.querySelector('body').style.backgroundColor = el.dataset.color;
+                    console.log(el)
                 }
             })
-        })
 
+        })
     </script>
+
 </head>
 
 <body>
+
+
     <h1 id='qwe'>Hello</h1>
     <button class="abc" data-color="red"> Red </button>
-    <button class="abc" data-color="blue"> Green </button>
-    <button class="abc" data-color="green"> Blue </button>
+    <button class="abc" data-color="green"> Green </button>
+    <button class="abc" data-color="Blue"> Blue </button>
 </body>
+
 
 </html>
