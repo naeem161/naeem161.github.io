@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <script>
+        'use strict'
+        document.addEventListener('DOMContentLoaded', function () {
+
+            document.querySelector(".new-task").onsubmit = function () {
+                const li = document.createElement('li');
+                li.innerHTML = document.querySelector('.task').value;
+
+                document.querySelector('.tasks').append(li);
+                document.querySelector('.task').value = '';
+
+                return false;
+            }
+        })
+    </script>
+</head>
+
+<body>
+
+    <h1>Task</h1>
+
+    <ul class="tasks">
+
+    </ul>
+    <form class="new-task">
+        <input type="text" class="task" autofocus placeholder="New Task">
+        <input type="submit">
+    </form>
+</body>
+
+</html>
